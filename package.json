@@ -1,0 +1,28 @@
+{
+  "name": "team_profile_generator",
+  "version": "1.0.0",
+  "description": "Node.js command-line app to generate a team profile on a HTML webpage",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paperpatch/team_profile_generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paperpatch/team_profile_generator/issues"
+  },
+  "homepage": "https://github.com/paperpatch/team_profile_generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
