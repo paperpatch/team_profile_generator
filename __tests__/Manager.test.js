@@ -1,13 +1,17 @@
 const Manager = require('../lib/Manager');
 
-jest.mock('../lib/Manager.js');
-
 test('creates a manager object', () => {
-  const manager = new Manager('Pat');
+  const manager = new Manager('Pat', 123, "test@test.com", 1234567890);
 
   expect(manager.name).toBe('Pat');
   expect(manager.id).toEqual(expect.any(Number));
-  expect(manager.email).toEqual(expect.stringContaining('@placeholder.com'));
-  expect(manager.officeNumber).toEqual(expect.stringContaining('1234567890'));
+  expect(manager.email).toEqual(expect.stringContaining('@test.com'));
+  expect(manager.officeNumber).toEqual(expect.any(Number));
 });
 
+test('checks if Manager role overrides Employee', () => {
+  const manager = new Manager('Pat', 123, "test@test.com", 1234567890);
+
+  // expect(manager.getRole()).toEqual(expect.stringContaining('Manager'));
+  expect(manager.getRole()).toEqual(expect.stringContaining('Manager'));
+})
