@@ -1,6 +1,6 @@
 const Employee = require('../lib/Employee');
 
-test('creates manager values', () => {
+test('creates employee values', () => {
   const employee = new Employee('Pat', 123, "test@test.com");
 
   expect(employee.name).toBe('Pat');
@@ -11,6 +11,5 @@ test('creates manager values', () => {
 test('checks the Employee role is Employee', () => {
   const employee = new Employee('Pat', 123, "test@test.com");
 
-  // expect(manager.getRole()).toEqual(expect.stringContaining('Manager'));
   expect(employee.getRole()).toEqual(expect.stringContaining('Employee'));
 })
