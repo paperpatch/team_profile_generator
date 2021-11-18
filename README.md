@@ -22,7 +22,7 @@ Run `npm install` in order to install the following npm package dependencies as 
 
 `npm init`
 
-`npm install jest --save-dev`
+`npm install --save-dev jest`
 
 `npm install inquirer`
 
