@@ -1,17 +1,16 @@
 const Employee = require('../lib/Employee');
 
-test('creates a manager object', () => {
-  const manager = new Manager('Pat');
+test('creates manager values', () => {
+  const employee = new Employee('Pat', 123, "test@test.com");
 
-  expect(manager.name).toBe('Pat');
-  expect(manager.id).toEqual(expect.any(Number));
-  expect(manager.email).toEqual(expect.stringContaining('@placeholder.com'));
-  expect(manager.officeNumber).toEqual(expect.stringContaining(manager.officeNumber.toString()));
+  expect(employee.name).toBe('Pat');
+  expect(employee.id).toEqual(expect.any(Number));
+  expect(employee.email).toEqual(expect.stringContaining('@test.com'));
 });
 
-test('checks if Manager role overrides Employee', () => {
-  const manager = new Manager('Pat');
+test('checks the Employee role is Employee', () => {
+  const employee = new Employee('Pat', 123, "test@test.com");
 
   // expect(manager.getRole()).toEqual(expect.stringContaining('Manager'));
-  expect(manager.getRole()).toEqual(expect.stringContaining(manager.toString()));
+  expect(employee.getRole()).toEqual(expect.stringContaining('Employee'));
 })
