@@ -24,11 +24,11 @@ const addManager = function() {
       }
     },
     {
-      type: 'number',
+      type: 'input',
       name: 'id',
       message: "Enter Manager's ID",
       validate: idInput => {
-        if (idInput) {
+        if (isNaN(idInput)) {
           return true;
         } else {
           console.log("Please enter the manager's ID.");
@@ -51,11 +51,11 @@ const addManager = function() {
       }
     },
     {
-      type: 'number',
+      type: 'input',
       name: 'officeNumber',
       message: "Enter Manager's office number",
       validate: officeInput => {
-        if (officeInput) {
+        if (isNaN(officeInput)) {
           return true;
         } else {
           console.log("Please enter the manager's office number.");
@@ -100,11 +100,11 @@ const addEmployee = function() {
       }
     },
     {
-      type: 'number',
+      type: 'input',
       name: 'id',
       message: "Enter Employee's ID",
       validate: idInput => {
-        if (idInput) {
+        if (isNaN(idInput)) {
           return true;
         } else {
           console.log("Please enter the employee's ID.");
@@ -182,10 +182,6 @@ const addEmployee = function() {
       return team;
     }
   })
-}
-
-const addHTML = function() {
-  // append
 }
 
 const writeToFile = fileContent => {
