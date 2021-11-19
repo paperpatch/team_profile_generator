@@ -26,13 +26,13 @@ Run `npm install` in order to install the following npm package dependencies as 
 
 `npm install inquirer`
 
-Start the application by running `node index` in the command line.
+Start the application by running `node app` in the command line.
 
 ## Usage
 
 :computer:
 
-Run `node index` in the command line and it will give out a series of prompts in which you are a manager building your team profile.
+Run `node app` in the command line and it will give out a series of prompts in which you are a manager building your team profile.
 
 After filling out your name, employee ID, email address, and office number, you will be prompted the option to add an engineer or intern to finish building your team.
 
