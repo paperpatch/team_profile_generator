@@ -9,6 +9,11 @@ const generateHTML = require('./src/generateHTML');
 const team = [];
 
 const addManager = function() {
+  console.log(`
+  =======================
+  Add Manager to the Team
+  =======================
+  `)
   return inquirer.prompt([
     {
       type: 'input',
@@ -29,10 +34,10 @@ const addManager = function() {
       message: "Enter Manager's ID",
       validate: idInput => {
         if (isNaN(idInput)) {
-          return true;
-        } else {
           console.log("Please enter the manager's ID.");
           return false;
+        } else {
+          return true;
         }
       }
     },
@@ -56,10 +61,10 @@ const addManager = function() {
       message: "Enter Manager's office number",
       validate: officeInput => {
         if (isNaN(officeInput)) {
-          return true;
-        } else {
           console.log("Please enter the manager's office number.");
           return false;
+        } else {
+          return true;
         }
       }
     },
@@ -84,7 +89,7 @@ const addEmployee = function() {
       type: 'list',
       name: 'role',
       message: "Enter Employee's role",
-      choice: ['Engineer', 'Intern']
+      choices: ['Engineer', 'Intern']
     },
     {
       type: 'input',
@@ -105,10 +110,10 @@ const addEmployee = function() {
       message: "Enter Employee's ID",
       validate: idInput => {
         if (isNaN(idInput)) {
-          return true;
-        } else {
           console.log("Please enter the employee's ID.");
           return false;
+        } else {
+          return true;
         }
       }
     },
@@ -156,13 +161,15 @@ const addEmployee = function() {
     },
     {
       type: 'confirm',
-      name: 'addEmployee',
+      name: 'confirmAddEmployee',
       message: 'Would you like to add more team members?',
       default: false,
     }
   ])
+    // const manager = new Manager(name, id, email, officeNumber);
+
   .then(employeeData => {
-    let employee = {name, id, email, role, github, school, addEmployee} = employeeData;
+    let {role, name, id, email, github, school, confirmAddEmployee} = employeeData;
 
     if (role === "Engineer") {
       employee = new Engineer(name, id, email, github);
@@ -174,9 +181,8 @@ const addEmployee = function() {
     }
 
     team.push(employee);
-    console.log(team);
 
-    if (addEmployee) {
+    if (confirmAddEmployee) {
       return addEmployee(team);
     } else {
       return team;
