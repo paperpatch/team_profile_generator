@@ -166,7 +166,6 @@ const addEmployee = function() {
       default: false,
     }
   ])
-    // const manager = new Manager(name, id, email, officeNumber);
 
   .then(employeeData => {
     let {role, name, id, email, github, school, confirmAddEmployee} = employeeData;
@@ -199,7 +198,7 @@ const writeToFile = fileContent => {
       }
       resolve({
         ok: true,
-        message: 'Team document created!'
+        message: 'Team profile created!'
       })
     })
   })
