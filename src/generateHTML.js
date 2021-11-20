@@ -9,7 +9,7 @@ function generateManagerHTML(manager) {
       <div class="card-body">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${manager.id}</li>
-          <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</li>
+          <li class="list-group-item">Email: <a href="mailto:${manager.email}" target="_blank">${manager.email}</a></li>
           <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
         </ul>
       </div>
@@ -29,8 +29,8 @@ function generateEngineerHTML(engineer) {
       <div class="card-body">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${engineer.id}</li>
-          <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</li>
-          <li class="list-group-item">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></li>
+          <li class="list-group-item">Email: <a href="mailto:${engineer.email}" target="_blank">${engineer.email}</a></li>
+          <li class="list-group-item">Github: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></li>
         </ul>
       </div>
     </div>
@@ -49,7 +49,7 @@ function generateInternHTML(intern) {
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${intern.id}</li>
-            <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</li>
+            <li class="list-group-item">Email: <a href="mailto:${intern.email}" target="_blank">${intern.email}</a></li>
             <li class="list-group-item">School: ${intern.school}</li>
           </ul>
         </div>

@@ -228,8 +228,12 @@ addManager()
   .then(dataHTML => {
     return writeToFile(dataHTML);
   })
+  .then(writeFileResponse => {
+    console.log(writeFileResponse);
+    return copyFile();
+  })
   .then(copyFileResponse => {
-    cconsole.log(copyFileResponse);
+    console.log(copyFileResponse);
   })
   .catch(err => {
     console.log(err);
