@@ -207,6 +207,7 @@ const writeToFile = fileContent => {
 addManager()
   .then(addEmployee)
   .then(team => {
+    // console.log(team);
     return generateHTML(team);
   })
   .then(dataHTML => {

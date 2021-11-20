@@ -58,21 +58,33 @@ function generateInternHTML(intern) {
   `
 }
 
-function generateTeam(teamData) {
-  for (let i =0; i< teamData.length; i++) {
-    if (teamData[i].role === "Manager") {
-      generateManagerHTML(teamData);
+function generateTeam(data) {
 
-    } else if (teamData[i].role === "Engineer") {
-      generateEngineerHTML(teamData);
+  pageData = [];
 
-    } else if (teamData[i].role === "Intern") {
-      generateInternHTML(teamData);
+  for (let i =0; i< data.length; i++) {
+
+    const employee = data[i];
+    const role = employee.getRole();
+    // console.log(role);
+
+    if (role === "Manager") {
+      pageData.push(generateManagerHTML(employee));
+    }
+
+    if (role === "Engineer") {
+      pageData.push(generateEngineerHTML(employee));
+    }
+
+    if (role === "Intern") {
+      pageData.push(generateInternHTML(employee));
     }
   }
+
+  return pageData.join('')
 }
 
-const generateHTML = function (teamArray) {
+const generateHTML = function (data) {
   return `
   <!DOCTYPE html>
   <html lang="en">
@@ -91,7 +103,7 @@ const generateHTML = function (teamArray) {
     <main>
       <div class="container">
         <div class="row justify-content-center">
-          ${generateTeam(teamArray)}
+          ${generateTeam(data)}
         </div>
       </div>
     </main>
