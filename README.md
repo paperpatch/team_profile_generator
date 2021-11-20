@@ -9,7 +9,9 @@ Node.js command-line app to generate a team profile on a HTML webpage. Uses Obje
 
 * [Setup](#setup)
 * [Usage](#usage)
+* [Tests](#tests)
 * [Contributing](#contributing)
+* [License](#license)
 
 ## Setup
 :floppy_disk:
@@ -43,6 +45,32 @@ If `engineer` was selected, you will be prompted for the engineer's name, ID, em
 If `intern` was selected, you will be prompted for the intern's name, ID, email, and school.
 
 After finishing your inputs, the app will generate an HTML page and copy a sourced CSS file. The files can be found within the `dist` folder.
+
+A demonstration can be found below:
+
+![!demo gif](./assets/images/team_generator_demo.gif)
+
+## Tests
+
+:gear:
+
+To run tests in this project, open up the terminal associated with the files. Ensure that C:\filePath is in the correct location. Be sure to have all files associated with `npm` and `jest` installed.
+
+Within the terminal, you can type the following commands to activate the tests:
+
+`npm run test`
+
+`npm run test Employee`
+
+`npm run test Engineer`
+
+`npm run test Intern`
+
+`npm run test Manager`
+
+See the gif below for an example:
+
+![!run test gif](./assets/images/team_profile_generator_run_test.gif)
 
 
 ## Contributing
