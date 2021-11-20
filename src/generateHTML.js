@@ -1,10 +1,10 @@
 function generateManagerHTML(manager) {
   return `
-  <div class="col-lg-3 col-md-2">
-    <div class="card" style="width: 18rem;">
+  <div class="col-lg-4 col-md-6 p-3">
+    <div class="card">
       <div class="card-header">
         <h5 class="card-title">${manager.name}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
+        <h6 class="card-subtitle mb-2">Manager</h6>
       </div>
       <div class="card-body">
         <ul class="list-group list-group-flush">
@@ -20,11 +20,11 @@ function generateManagerHTML(manager) {
 
 function generateEngineerHTML(engineer) {
   return `
-  <div class="col-lg-3 col-md-2">
-    <div class="card" style="width: 18rem;">
+  <div class="col-lg-4 col-md-6 p-3">
+    <div class="card">
       <div class="card-header">
         <h5 class="card-title">${engineer.name}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
+        <h6 class="card-subtitle mb-2">Engineer</h6>
       </div>
       <div class="card-body">
         <ul class="list-group list-group-flush">
@@ -40,11 +40,11 @@ function generateEngineerHTML(engineer) {
 
 function generateInternHTML(intern) {
   return `
-    <div class="col-lg-3 col-md-2">
-      <div class="card" style="width: 18rem;">
+    <div class="col-lg-4 col-md-6 p-3">
+      <div class="card">
         <div class="card-header">
           <h5 class="card-title">${intern.name}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Intern</h6>
+          <h6 class="card-subtitle mb-2">Intern</h6>
         </div>
         <div class="card-body">
           <ul class="list-group list-group-flush">
@@ -97,7 +97,9 @@ const generateHTML = function (data) {
   </head>
   <body>
     <header>
-      <h1>Team Profile</h1>
+      <nav class="navbar" id="navbar">
+        <span class="navbar-brand mb-0 h1 w-100 text-center fs-1">Team Profile</span>
+      </nav>
     </header>
     <main>
       <div class="container">
